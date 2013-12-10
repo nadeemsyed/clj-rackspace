@@ -14,14 +14,13 @@
 
 (defn get-flavors-list 
   [identity-response region]
-  (get-list-by-type 
+  (-get-list-by-type 
     identity-response  "flavors" (keyword region)))
 
 (defn get-images-list 
   [identity-response region]
-  (get-list-by-type 
+  (-get-list-by-type 
     identity-response  "images" (keyword region)))
-
 
 (defn -get-data 
   [identity-response url-path region]
@@ -37,8 +36,7 @@
         {:headers
          {const/x-auth-token (identity/get-token identity-response)}}))))
 
-(defn get-list-by-type
-  ""
+(defn -get-list-by-type
   [identity-response request-type region]
   (map
     #(hash-map (:name %1) (:id %1))
