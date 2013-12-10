@@ -6,6 +6,6 @@
                                         get-cloud-servers-endpoints
                                         get-cloud-servers-region
                                         get-cloud-servers-region-url]]
-            [rackspace.servers.v2.service :refer [get-images-list
-                                                  get-flavors-list
-                                                  get-new-server-payload]]))
+            [rackspace.servers.v2.service :refer [get-new-server-payload
+                                                  get-images-list
+                                                  get-flavors-list]]))
