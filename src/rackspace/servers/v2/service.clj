@@ -1,5 +1,6 @@
 (ns rackspace.servers.v2.service
-  (:require [rackspace.const :as const]
+  (:require [clojure.data.json :as json]
+            [rackspace.const :as const]
             [rackspace.services :as services]
             [clj-http.client :as http]
             [rackspace.util :as util]
